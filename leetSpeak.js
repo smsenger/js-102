@@ -1,76 +1,41 @@
 
-function hacker_speak(test) {
-    i = 0;
-    while (i <= test.length) { 
-        i++;                        //iterate through string                                 
-        if (i = 'A') {               //conditional statements that indicate which letters to replace with which numbers    
-            console.log("4");
-        }  
-        else if (i = 'E') {
-            console.log("3" + '');
-        } 
-        else if (i = 'G') {
-            console.log("6");
-        }
-        else if (i = 'I') {
-            console.log("1");
-        }
-        else if (i = 'O') {
-            console.log("0");
-        }
-        else if (i = 'S') {
-            console.log("5");
-        }
-        else if (i = 'T') {
-            console.log("7");
-        }  
-        // else {
-        //     console.log(i);
-        // }
-    }   
-}
-hacker_speak("Here is a sentence to try this out. Hackerssssss!");    
+//Changes some letters into alternative characters.         
+var obj = {
+    A : '4',
+    B : 'B',
+    C : 'C',
+    D : 'D',
+    E : '3',
+    F : 'F',
+    G : '6',
+    H : '#',
+    I : '1',
+    J : 'J',
+    K : 'K',
+    L : 'L',
+    M : 'M',
+    N : 'N',
+    O : '0',
+    P : 'P',
+    Q : 'Q',
+    R : 'R',
+    S : '5',
+    T : '7',
+    U : 'U',
+    V : 'V',
+    W : 'W',
+    X : 'X',
+    Y : 'Y',
+    Z : '2'
+  }
 
-// > A => 4
-// > E => 3
-// > G => 6
-// > I => 1
-// > O => 0
-// > S => 5
-// > T => 7
-
-
-
-
-
-
-// function hacker_speak(test) {
-
-//     for (let i = 0; i <= test.length; i++) {   //iterate through string                                 
-//         if (i = 'A') {              //conditional statements that indicate which letters to replace with which numbers    
-//             console.log("4");  
-//         }
-//         else if (i = 'E') {
-//             console.log("3" + '');
-//         } 
-//         else if (i = 'G') {
-//             console.log("6");
-//         }
-//         else if (i = 'I') {
-//             console.log("1");
-//         }
-//         else if (i = 'O') {
-//             console.log("0");
-//         }
-//         else if (i = 'S') {
-//             console.log("5");
-//         }
-//         else if (i = 'T') {
-//             console.log("7");
-//         }
-//         // else {
-//         //     console.log(i);
-//         // }
-//     }   
-// }
-// hacker_speak("Here is a sentence to try this out. Hackerssssss!");           
+  
+  function toLeetSpeak (str){
+    let arr = str.toUpperCase().split('');
+    for (var i in arr){
+      arr[i] = obj[arr[i]];
+    }
+    return arr.join('');
+  }
+  
+  console.log(toLeetSpeak('Leet'));
